@@ -89,14 +89,14 @@ body {
   margin-right: 40px;
 }
 .main-text h1 {
-  font-size: 2.8em;
+  font-size: 3.2em; /* Made headline bigger */
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   line-height: 1.1;
 }
 .subheadline {
-  font-size: 1.2em;
-  margin-bottom: 32px;
+  font-size: 1.6em; /* Made subheadline bigger */
+  margin-bottom: 38px;
 }
 .main-btn {
   display: inline-block;
@@ -115,10 +115,10 @@ body {
   background: #FFD84A;
 }
 .note {
-  font-size: 0.9em;
+  font-size: 1.2em; /* Made note bigger */
   color: #fff;
-  opacity: 0.8;
-  margin-top: 10px;
+  opacity: 0.85;
+  margin-top: 16px;
 }
 
 /* Right side: photo grid */

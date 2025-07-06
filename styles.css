@@ -57,7 +57,7 @@ body {
   letter-spacing: 2px;
 }
 .header-btn {
-  background: #2E9DF7;
+  background: #0F2D52;
   color: #fff;
   padding: 10px 24px;
   border-radius: 8px;
@@ -68,14 +68,14 @@ body {
   transition: background 0.2s;
 }
 .header-btn:hover {
-  background: #0F2D52;
+  background: rgb(5, 67, 119);
 }
 
 /* Main section layout */
 .main-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* Center items vertically */
   background: #18376A; /* Slightly lighter navy */
   margin: 0;
   padding: 48px 5vw 48px 5vw;
@@ -87,24 +87,29 @@ body {
   flex: 1;
   max-width: 540px;
   margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically in main-text */
+  height: 100%;
 }
 .main-text h1 {
-  font-size: 3.8em; /* Even bigger headline */
+  font-size: 4.5em; /* Even bigger headline */
   font-weight: bold;
   margin-bottom: 28px;
   line-height: 1.1;
 }
 .subtitle {
-  font-size: 4em; /* Bigger subtitle */
-  font-weight: bold;
-  margin-bottom: 48px; /* More space below subtitle */
+  font-size: 4.3em; /* Slightly larger subtitle */
+  font-weight: bold; /* Bold subtitle */
+  margin-bottom: 24px; /* Less space below subtitle */
   letter-spacing: 1px;
   line-height: 1.1;
 }
 .subheadline {
   font-size: 1.1em; /* Smaller subheadline */
-  margin-bottom: 54px; /* More space below subheadline */
-  line-height: 1.7;
+  margin-bottom: 18px; /* Less space below subheadline */
+  line-height: 2.2; /* More space between lines for spreading out */
+  letter-spacing: 0.04em; /* Slightly more space between letters */
   opacity: 0.95;
 }
 .main-btn {
@@ -113,21 +118,21 @@ body {
   color: #18376A;
   font-size: 1.6em; /* Bigger button text */
   font-weight: bold;
-  padding: 22px 44px; /* Bigger button size */
+  padding: 22px 20px; /* Bigger button size */
   border-radius: 14px;
   text-decoration: none;
   border: 5px solid #fff;
-  margin-bottom: 22px;
+  margin-bottom: 18px; /* Less space below button */
   transition: background 0.2s;
 }
 .main-btn:hover {
   background: #FFD84A;
 }
 .note {
-  font-size: 1.4em; /* Bigger note */
+  font-size: 0.95em; /* Smaller note font */
   color: #fff;
   opacity: 0.9;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 /* Right side: photo grid */

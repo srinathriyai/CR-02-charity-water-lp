@@ -89,36 +89,45 @@ body {
   margin-right: 40px;
 }
 .main-text h1 {
-  font-size: 3.2em; /* Made headline bigger */
+  font-size: 3.8em; /* Even bigger headline */
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-bottom: 28px;
+  line-height: 1.1;
+}
+.subtitle {
+  font-size: 4em; /* Bigger subtitle */
+  font-weight: bold;
+  margin-bottom: 48px; /* More space below subtitle */
+  letter-spacing: 1px;
   line-height: 1.1;
 }
 .subheadline {
-  font-size: 1.6em; /* Made subheadline bigger */
-  margin-bottom: 38px;
+  font-size: 1.1em; /* Smaller subheadline */
+  margin-bottom: 54px; /* More space below subheadline */
+  line-height: 1.7;
+  opacity: 0.95;
 }
 .main-btn {
   display: inline-block;
   background: #FFC907;
   color: #18376A;
-  font-size: 1.2em;
+  font-size: 1.6em; /* Bigger button text */
   font-weight: bold;
-  padding: 16px 32px;
-  border-radius: 10px;
+  padding: 22px 44px; /* Bigger button size */
+  border-radius: 14px;
   text-decoration: none;
   border: 5px solid #fff;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
   transition: background 0.2s;
 }
 .main-btn:hover {
   background: #FFD84A;
 }
 .note {
-  font-size: 1.2em; /* Made note bigger */
+  font-size: 1.4em; /* Bigger note */
   color: #fff;
-  opacity: 0.85;
-  margin-top: 16px;
+  opacity: 0.9;
+  margin-top: 22px;
 }
 
 /* Right side: photo grid */

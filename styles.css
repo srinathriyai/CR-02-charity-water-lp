@@ -30,30 +30,8 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
-  /* Add diagonal accent using a linear gradient */
-  background-image: linear-gradient(120deg, transparent 65%, #FFF8E1 75%, #FFC907 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  /* Remove diagonal accent from body */
 }
-
-/* --- FADE-IN TRANSITION FOR MAIN CONTENT --- */
-.main-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center items vertically */
-  background: #18376A; /* Slightly lighter navy */
-  margin: 0;
-  padding: 48px 5vw 48px 5vw;
-  min-height: 80vh;
-  opacity: 0;
-  animation: fadeInMain 1.2s ease-in 0.2s forwards;
-}
-
-@keyframes fadeInMain {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-/* --- END OF FADE-IN TRANSITION --- */
 
 /* Header styles */
 .header {
@@ -105,6 +83,15 @@ body {
   min-height: 80vh;
   opacity: 0;
   animation: fadeInMain 1.2s ease-in 0.2s forwards;
+}
+
+@keyframes fadeInMain {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.main-section::after {
+  content: none;
 }
 
 /* Left side: text */
@@ -172,22 +159,22 @@ body {
   align-items: flex-start; /* Align grid to the left */
 }
 .photo-grid img {
-  width: 1100px; /* Even bigger for desktop browsers */
-  height: 650px;
+  width: 900px; /* Even bigger for desktop browsers */
+  height: 520px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 12px;
   margin-bottom: 0;
   background: #eee;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .photo-grid img {
     width: 98vw;
     max-width: 100%;
-    height: 320px;
+    height: 220px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .photo-grid img {
     width: 98vw;
     max-width: 100%;
@@ -429,43 +416,28 @@ section {
 .photo-grid {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 56px; /* 4x bigger gap between images */
   align-items: flex-end; /* Align grid to the right */
 }
 .grid-wide {
-  width: 260px;
-  height: 120px;
+  width: 1040px; /* 4x 260px */
+  height: 480px; /* 4x 120px */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 32px; /* 4x 8px */
   background: #eee;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10); /* 4x bigger shadow */
 }
 .grid-row {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 32px; /* 4x bigger gap between small images */
 }
 .grid-small {
-  width: 80px;
-  height: 80px;
+  width: 320px; /* 4x 80px */
+  height: 320px; /* 4x 80px */
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 32px; /* 4x 8px */
   background: #eee;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-}
-@media (max-width: 900px) {
-  .photo-grid {
-    align-items: center;
-  }
-  .grid-wide {
-    width: 90vw;
-    max-width: 260px;
-    height: 90px;
-  }
-  .grid-small {
-    width: 28vw;
-    max-width: 80px;
-    height: 60px;
-  }
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10); /* 4x bigger shadow */
 }
 /* --- END OF PHOTO GRID LAYOUT --- */

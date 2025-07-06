@@ -85,7 +85,7 @@ body {
 /* Left side: text */
 .main-text {
   flex: 1;
-  max-width: 540px;
+  max-width: 700px;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
@@ -93,9 +93,9 @@ body {
   height: 100%;
 }
 .main-text h1 {
-  font-size: 4.5em; /* Even bigger headline */
+  font-size: 5em; /* Even bigger headline */
   font-weight: bold;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   line-height: 1.1;
 }
 .subtitle {
@@ -112,22 +112,26 @@ body {
   letter-spacing: 0.04em; /* Slightly more space between letters */
   opacity: 0.95;
 }
+
 .main-btn {
   display: inline-block;
   background: #FFC907;
   color: #18376A;
-  font-size: 1.6em; /* Bigger button text */
+  font-size: 1.6em;
   font-weight: bold;
-  padding: 22px 20px; /* Bigger button size */
+  padding: 16px 10px; /* Shorter button: less left/right padding */
   border-radius: 14px;
   text-decoration: none;
   border: 5px solid #fff;
-  margin-bottom: 18px; /* Less space below button */
+  margin-bottom: 18px;
   transition: background 0.2s;
+  min-width: 220px; /* Optional: keeps button wide enough for text */
+  text-align: center;
 }
 .main-btn:hover {
   background: #FFD84A;
 }
+
 .note {
   font-size: 0.95em; /* Smaller note font */
   color: #fff;
@@ -139,11 +143,33 @@ body {
 .photo-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+  align-items: flex-end; /* Align grid to the right */
 }
-.photo-grid img {
+.grid-wide {
   width: 260px;
   height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.grid-small {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.photo-grid img {
+  width: 1040px; /* 4x bigger than 260px */
+  height: 480px; /* 4x bigger than 120px */
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0;
@@ -379,3 +405,48 @@ section {
     height: 80px;
   }
 }
+
+/* --- PHOTO GRID LAYOUT TO MATCH LANDING PAGE --- */
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end; /* Align grid to the right */
+}
+.grid-wide {
+  width: 260px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.grid-small {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+@media (max-width: 900px) {
+  .photo-grid {
+    align-items: center;
+  }
+  .grid-wide {
+    width: 90vw;
+    max-width: 260px;
+    height: 90px;
+  }
+  .grid-small {
+    width: 28vw;
+    max-width: 80px;
+    height: 60px;
+  }
+}
+/* --- END OF PHOTO GRID LAYOUT --- */

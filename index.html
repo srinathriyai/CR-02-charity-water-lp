@@ -4,118 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charity: Water Landing Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #0b2a5c;
-            color: #ffffff;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background-color: #ffffff;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 32px;
-        }
-
-        .logo span {
-            font-size: 20px;
-            color: #000000;
-            font-weight: 500;
-        }
-
-        .header-btn {
-            background-color: #0b2a5c;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 3px solid #FFD43B;
-        }
-
-        .main-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 60px 40px;
-        }
-
-        .main-text {
-            max-width: 50%;
-        }
-
-        .main-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .subheadline {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .main-btn {
-            display: inline-block;
-            background-color: #FFD43B;
-            color: #0b2a5c;
-            font-weight: bold;
-            padding: 15px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: #cccccc;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            max-width: 45%;
-        }
-
-        .photo-grid img:first-child {
-            grid-column: 1 / -1;
-        }
-
-        .photo-grid img {
-            width: 100%;
-            border-radius: 5px;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header with logo and button -->
     <header class="header">
+        <!-- Logo on the left -->
         <div class="logo">
             <img src="img/cw_logo.png" alt="charity: water logo">
             <span>charity: water</span>
         </div>
+        <!-- Button on the right -->
         <a href="#" class="header-btn">Meet the Cause</a>
     </header>
 
@@ -123,7 +22,7 @@
     <main class="main-section">
         <!-- Left side: text and button -->
         <div class="main-text">
-            <h1>Clean Water Can<br>Start With You,</h1>
+            <h1>Clean Water Can Start With You,</h1>
             <p class="subheadline">
                 As little as $10 can help bring clean water to a real community,<br>
                 and charity: water can show you exactly where it goes.
@@ -135,7 +34,8 @@
         </div>
         <!-- Right side: photo grid -->
         <div class="photo-grid">
-            <img src="img/photo1.jpg" alt="Children at water tap">
+            <!-- Add your images here -->
+            <img src="img/water-can-transparent.png" alt="Water tap">
             <img src="img/photo2.jpg" alt="Pouring water">
             <img src="img/photo3.jpg" alt="Carrying water">
             <img src="img/photo4.jpg" alt="Family with water">

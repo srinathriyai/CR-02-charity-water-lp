@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Header with logo and button -->
-    <header class="header">
+    <header class="header fade-in-header">
         <div class="logo">
             <img src="img/cw_logo.png" alt="charity: water logo">
         </div>
@@ -19,18 +19,17 @@
     <main class="main-section">
         <!-- Left side: Headline, subheadline, button, note -->
         <div class="main-text">
-            <h1>Clean Water Can Start With You.</h1>
-            <p class="subheadline">
-                As little as $10 can help bring clean water to a real community,<br>
+            <h1 class="fade-in-title">Clean Water Can Start With You.</h1>
+            <p class="subheadline fade-in-sub">As little as $10 can help bring clean water to a real community,<br>
                 and charity: water can show you exactly where it goes.
             </p>
-            <a href="#" class="main-btn">Help a Family Today!</a>
-            <p class="note">
-                *100% of your donation funds water projects. No hidden costs.
-            </p>
+            <div class="fade-in-main">
+                <a href="#" class="main-btn">Help a Family Today!</a>
+                <p class="note">*100% of your donation funds water projects. No hidden costs.</p>
+            </div>
         </div>
         <!-- Right side: Simple photo grid -->
-        <div class="photo-grid">
+        <div class="photo-grid fade-in-main">
             <img src="img/Kids_group_pic.jpg" alt="Group of kids">
             <img src="img/pouring water.jpg" alt="Pouring water into cup">
             <img src="img/water jug on head.jpg" alt="Carrying water container on head">
@@ -38,5 +37,25 @@
             <img src="img/drinking water.jpg" alt="Drinking water">  
         </div>
     </main>
+
+    <!-- Fade-in animation script -->
+    <script>
+    // Wait for the page to load
+    window.addEventListener('DOMContentLoaded', function() {
+      // Fade in header and title first
+      document.querySelector('.fade-in-header').style.opacity = 1;
+      document.querySelector('.fade-in-title').style.opacity = 1;
+      // Fade in subtitle after 600ms
+      setTimeout(function() {
+        document.querySelector('.fade-in-sub').style.opacity = 1;
+      }, 600);
+      // Fade in main button, note, and images after 1200ms
+      setTimeout(function() {
+        document.querySelectorAll('.fade-in-main').forEach(function(el) {
+          el.style.opacity = 1;
+        });
+      }, 1200);
+    });
+    </script>
 </body>
 </html>

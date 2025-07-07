@@ -156,7 +156,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px; /* More space between images */
-  align-items: flex-start; /* Align grid to the left */
+  align-items: flex-start - (flex-end / (0.5)); /* Align grid to the left */
 }
 .photo-grid img {
   width: 900px; /* Even bigger for desktop browsers */
@@ -417,7 +417,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 56px; /* 4x bigger gap between images */
-  align-items: flex-end; /* Align grid to the right */
+  align-items: flex-start; /* Align grid to the left */
 }
 .grid-wide {
   width: 1040px; /* 4x 260px */
@@ -441,3 +441,29 @@ section {
   box-shadow: 0 8px 32px rgba(0,0,0,0.10); /* 4x bigger shadow */
 }
 /* --- END OF PHOTO GRID LAYOUT --- */
+
+/* Fade-in staged animation for header, title, subtitle, main button/note, and images */
+.fade-in-header,
+.fade-in-title,
+.fade-in-sub,
+.fade-in-main {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in-header {
+  /* Header fades in first */
+  transition-delay: 0s;
+}
+.fade-in-title {
+  /* Title fades in with header */
+  transition-delay: 0s;
+}
+.fade-in-sub {
+  /* Subtitle fades in after header/title */
+  transition-delay: 0.6s;
+}
+.fade-in-main {
+  /* Main button, note, and images fade in last */
+  transition-delay: 1.2s;
+}

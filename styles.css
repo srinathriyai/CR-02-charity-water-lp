@@ -155,14 +155,15 @@ body {
 .photo-grid {
   display: flex;
   flex-direction: column;
-  gap: 32px; /* More space between images */
-  align-items: flex-start - (flex-end / (0.5)); /* Align grid to the left */
+  gap: 56px; /* 4x bigger gap between images */
+  align-items: flex-start; /* Align grid to the left */
+  margin-left: 0; /* Move grid to the far left */
 }
 .photo-grid img {
   width: 900px; /* Even bigger for desktop browsers */
   height: 520px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 0; /* Remove rounded corners */
   margin-bottom: 0;
   background: #eee;
   box-shadow: 0 4px 16px rgba(0,0,0,0.10);
@@ -466,4 +467,30 @@ section {
 .fade-in-main {
   /* Main button, note, and images fade in last */
   transition-delay: 1.2s;
+}
+
+/* Typing and fade-in staged animation for main text and images */
+.fade-in-sub,
+.fade-in-btn,
+.fade-in-note,
+.fade-in-images {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in-sub {
+  /* Subtitle fades in after title types */
+  transition-delay: 0s;
+}
+.fade-in-btn {
+  /* Main button fades in after subtitle */
+  transition-delay: 0s;
+}
+.fade-in-note {
+  /* Note fades in after button */
+  transition-delay: 0s;
+}
+.fade-in-images {
+  /* Images fade in last */
+  transition-delay: 0s;
 }

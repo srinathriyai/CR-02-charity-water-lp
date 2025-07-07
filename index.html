@@ -19,17 +19,15 @@
     <main class="main-section">
         <!-- Left side: Headline, subheadline, button, note -->
         <div class="main-text">
-            <h1 class="fade-in-title">Clean Water Can Start With You.</h1>
+            <h1 id="typewriter-title"></h1>
             <p class="subheadline fade-in-sub">As little as $10 can help bring clean water to a real community,<br>
                 and charity: water can show you exactly where it goes.
             </p>
-            <div class="fade-in-main">
-                <a href="#" class="main-btn">Help a Family Today!</a>
-                <p class="note">*100% of your donation funds water projects. No hidden costs.</p>
-            </div>
+            <a href="#" class="main-btn fade-in-btn">Help a Family Today!</a>
+            <p class="note fade-in-note">*100% of your donation funds water projects. No hidden costs.</p>
         </div>
         <!-- Right side: Simple photo grid -->
-        <div class="photo-grid fade-in-main">
+        <div class="photo-grid fade-in-images" style="margin-left:0;">
             <img src="img/Kids_group_pic.jpg" alt="Group of kids">
             <img src="img/pouring water.jpg" alt="Pouring water into cup">
             <img src="img/water jug on head.jpg" alt="Carrying water container on head">
@@ -38,23 +36,41 @@
         </div>
     </main>
 
-    <!-- Fade-in animation script -->
+    <!-- Typing and fade-in animation script -->
     <script>
-    // Wait for the page to load
-    window.addEventListener('DOMContentLoaded', function() {
-      // Fade in header and title first
+    // Typing effect for the main title
+    document.addEventListener('DOMContentLoaded', function() {
+      var titleText = "Clean Water Can Start With You.";
+      var titleElem = document.getElementById('typewriter-title');
+      var i = 0;
+      function typeWriter() {
+        if (i < titleText.length) {
+          titleElem.innerHTML += titleText.charAt(i);
+          i++;
+          setTimeout(typeWriter, 90); // Typing speed (ms) - slower now
+        } else {
+          // After typing, fade in subtitle
+          setTimeout(function() {
+            document.querySelector('.fade-in-sub').style.opacity = 1;
+          }, 200);
+          // Then fade in main button
+          setTimeout(function() {
+            document.querySelector('.fade-in-btn').style.opacity = 1;
+          }, 700);
+          // Then fade in note
+          setTimeout(function() {
+            document.querySelector('.fade-in-note').style.opacity = 1;
+          }, 1200);
+          // Then fade in images
+          setTimeout(function() {
+            document.querySelector('.fade-in-images').style.opacity = 1;
+          }, 1700);
+        }
+      }
+      // Fade in header right away
       document.querySelector('.fade-in-header').style.opacity = 1;
-      document.querySelector('.fade-in-title').style.opacity = 1;
-      // Fade in subtitle after 600ms
-      setTimeout(function() {
-        document.querySelector('.fade-in-sub').style.opacity = 1;
-      }, 600);
-      // Fade in main button, note, and images after 1200ms
-      setTimeout(function() {
-        document.querySelectorAll('.fade-in-main').forEach(function(el) {
-          el.style.opacity = 1;
-        });
-      }, 1200);
+      // Start typing effect after header is visible
+      setTimeout(typeWriter, 300);
     });
     </script>
 </body>
